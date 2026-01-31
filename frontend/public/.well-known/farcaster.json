@@ -1,30 +1,30 @@
 {
   "accountAssociation": {
-    "header": "",
-    "payload": "",
-    "signature": ""
+    "header": "eyJmaWQiOjU4MDczOCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDEwOUM5ZTgwMTNFY2U4ODZENGY4QUUyNjkyNTRkZTkzMEFFZmNkNDQifQ",
+    "payload": "eyJkb21haW4iOiJiYXNlLXJldmlldy52ZXJjZWwuYXBwIn0",
+    "signature": "Ufgs517HxAhbID6jhuNWcqSpHpGZLOvL0aXZnVkSbRQ7f9hV262wPQonIyJaRIx9j2a7QR+u1s2V58IHtM0NjBs="
   },
   "miniapp": {
     "version": "1",
     "name": "BaseReview",
-    "homeUrl": "https://your-domain.com",
-    "iconUrl": "https://your-domain.com/icon.png",
-    "splashImageUrl": "https://your-domain.com/splash.png",
+    "homeUrl": "https://base-review.vercel.app",
+    "iconUrl": "https://base-review.vercel.app/icon.png",
+    "splashImageUrl": "https://base-review.vercel.app/splash.png",
     "splashBackgroundColor": "#0052FF",
     "subtitle": "Community watchdog for Base apps",
     "description": "Protect yourself from scams with honest, decentralized reviews for Base MiniApps. Community-powered reputation platform.",
     "screenshotUrls": [
-      "https://your-domain.com/screenshot1.png",
-      "https://your-domain.com/screenshot2.png",
-      "https://your-domain.com/screenshot3.png"
+      "https://base-review.vercel.app/screenshot1.png",
+      "https://base-review.vercel.app/screenshot2.png",
+      "https://base-review.vercel.app/screenshot3.png"
     ],
     "primaryCategory": "utility",
     "tags": ["security", "reviews", "community", "defi", "base"],
-    "heroImageUrl": "https://your-domain.com/hero.png",
+    "heroImageUrl": "https://base-review.vercel.app/hero.png",
     "tagline": "Don't Get Scammed. Check First.",
     "ogTitle": "BaseReview - Community Watchdog",
     "ogDescription": "Protect yourself from scams with honest reviews for Base MiniApps",
-    "ogImageUrl": "https://your-domain.com/og-image.png",
+    "ogImageUrl": "https://base-review.vercel.app/og-image.png",
     "noindex": false
   }
 }
