@@ -11,7 +11,7 @@
     "iconUrl": "https://base-review.vercel.app/icon.png",
     "splashImageUrl": "https://base-review.vercel.app/splash.png",
     "splashBackgroundColor": "#0052FF",
-    "subtitle": "Community watchdog for Base apps",
+    "subtitle": "Base MiniApp safety reviews",
     "description": "Protect yourself from scams with honest, decentralized reviews for Base MiniApps. Community-powered reputation platform.",
     "screenshotUrls": [
       "https://base-review.vercel.app/screenshot1.png",
@@ -21,8 +21,8 @@
     "primaryCategory": "utility",
     "tags": ["security", "reviews", "community", "defi", "base"],
     "heroImageUrl": "https://base-review.vercel.app/hero.png",
-    "tagline": "Don't Get Scammed. Check First.",
-    "ogTitle": "BaseReview - Community Watchdog",
+    "tagline": "Check reviews. Stay safe.",
+    "ogTitle": "BaseReview - Safety First",
     "ogDescription": "Protect yourself from scams with honest reviews for Base MiniApps",
     "ogImageUrl": "https://base-review.vercel.app/og-image.png",
     "noindex": false
