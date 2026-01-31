@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { ethers, BrowserProvider } from 'ethers';
+import { BrowserProvider } from 'ethers';
 
 const BASE_CHAIN_ID = parseInt(import.meta.env.VITE_BASE_CHAIN_ID || '8453');
 

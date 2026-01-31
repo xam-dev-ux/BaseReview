@@ -9,7 +9,6 @@ interface EmbedMetadataProps {
 }
 
 export function EmbedMetadata({
-  title = 'BaseReview',
   imageUrl = '/hero.png',
   buttonTitle = 'Open BaseReview',
   actionUrl = '/',

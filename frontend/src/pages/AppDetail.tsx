@@ -6,7 +6,7 @@ import { StarRating } from '../components/shared/StarRating';
 import { VerificationBadge } from '../components/shared/VerificationBadge';
 import { LoadingSpinner } from '../components/shared/LoadingSpinner';
 import { EmbedMetadata } from '../components/shared/EmbedMetadata';
-import { formatRating, formatAddress, formatTimeAgo, formatNumber } from '../utils/format';
+import { formatRating, formatTimeAgo, formatNumber } from '../utils/format';
 import { VerificationStatus } from '../types';
 
 export function AppDetail() {

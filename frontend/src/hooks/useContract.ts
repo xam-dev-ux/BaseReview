@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { Contract, BrowserProvider } from 'ethers';
+import { Contract } from 'ethers';
 import { useWallet } from './useWallet';
 
 const CONTRACT_ADDRESS = import.meta.env.VITE_REVIEW_CONTRACT_ADDRESS;
