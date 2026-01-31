@@ -1,0 +1,16 @@
+{
+  "network": "base",
+  "chainId": "8453",
+  "contractAddress": "0xB40bE0C97bF0885D2400233a8DCF2793c486d726",
+  "deployer": "your-wallet-address",
+  "deploymentTime": "2024-01-31T17:45:00.000Z",
+  "config": {
+    "minReviewStake": "100000000000000",
+    "reviewEditWindow": 86400,
+    "disputePeriod": 604800,
+    "scamReportThreshold": 5,
+    "verificationStake": "50000000000000000",
+    "disputeBond": "10000000000000000",
+    "maxReviewsPerDay": 5
+  }
+}

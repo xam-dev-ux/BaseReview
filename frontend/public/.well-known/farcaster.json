@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "miniapp": {
+    "version": "1",
+    "name": "BaseReview",
+    "homeUrl": "https://your-domain.com",
+    "iconUrl": "https://your-domain.com/icon.png",
+    "splashImageUrl": "https://your-domain.com/splash.png",
+    "splashBackgroundColor": "#0052FF",
+    "subtitle": "Community watchdog for Base apps",
+    "description": "Protect yourself from scams with honest, decentralized reviews for Base MiniApps. Community-powered reputation platform.",
+    "screenshotUrls": [
+      "https://your-domain.com/screenshot1.png",
+      "https://your-domain.com/screenshot2.png",
+      "https://your-domain.com/screenshot3.png"
+    ],
+    "primaryCategory": "utility",
+    "tags": ["security", "reviews", "community", "defi", "base"],
+    "heroImageUrl": "https://your-domain.com/hero.png",
+    "tagline": "Don't Get Scammed. Check First.",
+    "ogTitle": "BaseReview - Community Watchdog",
+    "ogDescription": "Protect yourself from scams with honest reviews for Base MiniApps",
+    "ogImageUrl": "https://your-domain.com/og-image.png",
+    "noindex": false
+  }
+}
