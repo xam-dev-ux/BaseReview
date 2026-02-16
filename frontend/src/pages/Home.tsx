@@ -41,7 +41,7 @@ export function Home() {
               <Link to="/browse" className="btn bg-white text-base-primary hover:bg-gray-100 px-8 py-3 text-lg font-semibold">
                 Browse Apps
               </Link>
-              <Link to="/browse?action=review" className="btn bg-yellow-400 text-gray-900 hover:bg-yellow-300 px-8 py-3 text-lg font-semibold">
+              <Link to="/write-review" className="btn bg-yellow-400 text-gray-900 hover:bg-yellow-300 px-8 py-3 text-lg font-semibold">
                 Write a Review
               </Link>
             </div>
