@@ -1,11 +1,14 @@
 import { useState } from 'react';
-import { Search, SlidersHorizontal } from 'lucide-react';
+import { Search, SlidersHorizontal, Edit3 } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
 import { useApps } from '../hooks/useReviews';
 import { AppCard } from '../components/app/AppCard';
 import { LoadingSpinner } from '../components/shared/LoadingSpinner';
 import { Category, CATEGORY_LABELS, VerificationStatus } from '../types';
 
 export function Browse() {
+  const [searchParams] = useSearchParams();
+  const isReviewMode = searchParams.get('action') === 'review';
   const { data: apps, isLoading } = useApps();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
@@ -43,6 +46,19 @@ export function Browse() {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-8">Browse Apps</h1>
+
+        {/* Review Mode Banner */}
+        {isReviewMode && (
+          <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-xl shadow-sm border border-yellow-600 p-6 mb-8">
+            <div className="flex items-center gap-3 mb-2">
+              <Edit3 className="text-gray-900" size={24} />
+              <h2 className="text-2xl font-bold text-gray-900">Write a Review</h2>
+            </div>
+            <p className="text-gray-900 text-lg">
+              Select an app below to write your review. Help the community by sharing your experience!
+            </p>
+          </div>
+        )}
 
         {/* Search and Filters */}
         <div className="bg-white rounded-xl shadow-sm border p-6 mb-8">

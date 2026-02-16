@@ -36,6 +36,16 @@ export function Home() {
               Community-powered reviews for Base MiniApps. By users, for users.
             </p>
 
+            {/* CTA Buttons */}
+            <div className="flex gap-4 justify-center mb-8">
+              <Link to="/browse" className="btn bg-white text-base-primary hover:bg-gray-100 px-8 py-3 text-lg font-semibold">
+                Browse Apps
+              </Link>
+              <Link to="/browse?action=review" className="btn bg-yellow-400 text-gray-900 hover:bg-yellow-300 px-8 py-3 text-lg font-semibold">
+                Write a Review
+              </Link>
+            </div>
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-12">
               <div className="relative">
