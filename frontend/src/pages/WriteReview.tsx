@@ -65,8 +65,8 @@ export function WriteReview() {
         .map((h) => h.trim())
         .filter((h) => h.startsWith('0x'));
 
-      // Minimum stake: 0.001 ETH
-      const stake = parseEther('0.001');
+      // Minimum stake: 0.0000001 ETH
+      const stake = parseEther('0.0000001');
 
       await submitReview.mutateAsync({
         appId: Number(appId),
@@ -113,7 +113,7 @@ export function WriteReview() {
           {!isConnected ? (
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
               <p className="text-sm text-yellow-800">
-                Please connect your wallet to submit a review. A minimum stake of 0.001 ETH is required.
+                Please connect your wallet to submit a review. A minimum stake of 0.0000001 ETH is required.
               </p>
             </div>
           ) : (
@@ -122,7 +122,7 @@ export function WriteReview() {
                 Connected as: <span className="font-mono">{account}</span>
               </p>
               <p className="text-sm text-blue-800 mt-1">
-                Stake required: <span className="font-semibold">0.001 ETH</span>
+                Stake required: <span className="font-semibold">0.0000001 ETH</span>
               </p>
             </div>
           )}
@@ -264,7 +264,7 @@ export function WriteReview() {
                     Submitting...
                   </>
                 ) : (
-                  'Submit Review (0.001 ETH stake)'
+                  'Submit Review (0.0000001 ETH stake)'
                 )}
               </button>
               <Link to={`/app/${appId}`} className="btn btn-secondary">
