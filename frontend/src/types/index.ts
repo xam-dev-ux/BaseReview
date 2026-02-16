@@ -159,3 +159,7 @@ export const ALL_TAGS = [
   ...TAG_OPTIONS.negative,
   ...TAG_OPTIONS.scam,
 ];
+
+export const TAG_LABELS: Record<number, string> = Object.fromEntries(
+  ALL_TAGS.map((tag) => [tag.id, tag.label])
+);

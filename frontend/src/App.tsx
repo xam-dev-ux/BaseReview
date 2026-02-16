@@ -5,6 +5,7 @@ import { Shield } from 'lucide-react';
 import { Home } from './pages/Home';
 import { Browse } from './pages/Browse';
 import { AppDetail } from './pages/AppDetail';
+import { WriteReview } from './pages/WriteReview';
 import { Terms } from './pages/Terms';
 import { WalletButton } from './components/shared/WalletButton';
 
@@ -51,6 +52,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/browse" element={<Browse />} />
               <Route path="/app/:appId" element={<AppDetail />} />
+              <Route path="/app/:appId/review" element={<WriteReview />} />
               <Route path="/terms" element={<Terms />} />
             </Routes>
           </main>
