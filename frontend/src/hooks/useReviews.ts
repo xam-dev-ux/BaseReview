@@ -3,6 +3,7 @@ import { useContract } from './useContract';
 import { ethers } from 'ethers';
 import { Review, MiniApp } from '../types';
 import { uploadToIPFS } from '../utils/ipfs';
+import { executeWithBuilderCode } from '../utils/contractHelpers';
 
 export function useApps(offset = 0, limit = 100) {
   const { contract } = useContract();
@@ -65,13 +66,17 @@ export function useRegisterApp() {
       // Upload metadata to IPFS
       const metadataIPFS = await uploadToIPFS(params.metadata);
 
-      // Register app
-      const tx = await contract.registerMiniApp(
-        params.name,
-        params.url,
-        params.category,
-        params.contractAddresses,
-        metadataIPFS
+      // Register app with builder code attribution
+      const tx = await executeWithBuilderCode(
+        contract,
+        'registerMiniApp',
+        [
+          params.name,
+          params.url,
+          params.category,
+          params.contractAddresses,
+          metadataIPFS,
+        ]
       );
 
       const receipt = await tx.wait();
@@ -112,15 +117,19 @@ export function useSubmitReview() {
         ethers.zeroPadValue(hash, 32)
       ) || [];
 
-      // Submit review
-      const tx = await contract.leaveReview(
-        params.appId,
-        params.rating,
-        params.reviewType,
-        params.tags,
-        reviewIPFS,
-        proofIPFS,
-        txHashesBytes32,
+      // Submit review with builder code attribution
+      const tx = await executeWithBuilderCode(
+        contract,
+        'leaveReview',
+        [
+          params.appId,
+          params.rating,
+          params.reviewType,
+          params.tags,
+          reviewIPFS,
+          proofIPFS,
+          txHashesBytes32,
+        ],
         { value: params.stake }
       );
 
@@ -143,7 +152,11 @@ export function useVoteHelpful() {
       const contract = await contractWithSigner;
       if (!contract) throw new Error('Wallet not connected');
 
-      const tx = await contract.voteHelpful(params.reviewId, params.isHelpful);
+      const tx = await executeWithBuilderCode(
+        contract,
+        'voteHelpful',
+        [params.reviewId, params.isHelpful]
+      );
       const receipt = await tx.wait();
       return receipt;
     },
@@ -163,7 +176,11 @@ export function useRespondToReview() {
       if (!contract) throw new Error('Wallet not connected');
 
       const responseIPFS = await uploadToIPFS({ response: params.response });
-      const tx = await contract.respondToReview(params.reviewId, responseIPFS);
+      const tx = await executeWithBuilderCode(
+        contract,
+        'respondToReview',
+        [params.reviewId, responseIPFS]
+      );
       const receipt = await tx.wait();
       return receipt;
     },
